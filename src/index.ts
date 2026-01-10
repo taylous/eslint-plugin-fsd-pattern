@@ -12,7 +12,7 @@ const plugin: ESLint.Plugin = {
   configs: {},
 };
 
-// Recommended configuration for ESLint 9 flat config
+// Recommended configuration for ESLint 9+ (flat config)
 const recommendedConfig: Linter.FlatConfig = {
   plugins: {
     'fsd-pattern': plugin,
@@ -22,8 +22,17 @@ const recommendedConfig: Linter.FlatConfig = {
   },
 };
 
+// Legacy recommended configuration for ESLint 8 and below (.eslintrc format)
+const legacyRecommendedConfig = {
+  plugins: ['fsd-pattern'],
+  rules: {
+    'fsd-pattern/layer-imports': 'error',
+  },
+} as const;
+
 plugin.configs = {
   recommended: recommendedConfig,
+  'legacy-recommended': legacyRecommendedConfig as any,
 };
 
 export default plugin;
