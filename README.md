@@ -7,7 +7,7 @@ ESLint plugin for enforcing [Feature-Sliced Design (FSD)](https://feature-sliced
 - ✅ **Layer Import Rules**: Enforces FSD layer hierarchy - lower layers cannot import from upper layers
 - ✅ **Configurable Layer Names**: Support for both singular and plural layer names
 - ✅ **TypeScript Support**: Works with both JavaScript and TypeScript projects
-- ✅ **ESLint 9 Compatible**: Built for ESLint 9 with flat config support
+- ✅ **ESLint 8 & 9 Compatible**: Supports both ESLint 8 (legacy config) and ESLint 9 (flat config)
 
 ## Installation
 
@@ -17,7 +17,7 @@ npm install --save-dev eslint-plugin-fsd-pattern
 
 ## Usage
 
-### ESLint 9 (Flat Config)
+### ESLint 9+ (Flat Config)
 
 Add to your `eslint.config.js`:
 
@@ -44,6 +44,42 @@ import fsdPattern from 'eslint-plugin-fsd-pattern';
 export default [
   fsdPattern.configs.recommended,
 ];
+```
+
+### ESLint 8 and Below (Legacy Config)
+
+Add to your `.eslintrc.js` or `.eslintrc.json`:
+
+**JavaScript (.eslintrc.js):**
+```javascript
+module.exports = {
+  plugins: ['fsd-pattern'],
+  rules: {
+    'fsd-pattern/layer-imports': 'error',
+  },
+};
+```
+
+**JSON (.eslintrc.json):**
+```json
+{
+  "plugins": ["fsd-pattern"],
+  "rules": {
+    "fsd-pattern/layer-imports": "error"
+  }
+}
+```
+
+**With options:**
+```javascript
+module.exports = {
+  plugins: ['fsd-pattern'],
+  rules: {
+    'fsd-pattern/layer-imports': ['error', {
+      usePlural: false,  // Use singular layer names
+    }],
+  },
+};
 ```
 
 ## FSD Layer Hierarchy
