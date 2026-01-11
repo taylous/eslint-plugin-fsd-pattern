@@ -1,7 +1,7 @@
 // Example ESLint configuration for projects using FSD pattern
-// This file shows how to configure eslint-plugin-fsd-pattern
+// This file shows how to configure @taylous/eslint-plugin-fsd-pattern
 
-import fsdPattern from 'eslint-plugin-fsd-pattern';
+import fsdPattern from '@taylous/eslint-plugin-fsd-pattern';
 
 export default [
   {

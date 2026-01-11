@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-fsd-pattern",
+  "name": "@taylous/eslint-plugin-fsd-pattern",
   "version": "0.1.0",
   "description": "ESLint plugin for enforcing Feature-Sliced Design (FSD) architecture patterns",
   "keywords": [
@@ -15,6 +15,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest",
@@ -44,6 +47,6 @@
     "type": "git",
     "url": "https://github.com/taylous/eslint-plugin-fsd-pattern.git"
   },
-  "author": "",
+  "author": "taylous",
   "license": "MIT"
 }

@@ -1,4 +1,4 @@
-# eslint-plugin-fsd-pattern
+# @taylous/eslint-plugin-fsd-pattern
 
 ESLint plugin for enforcing [Feature-Sliced Design (FSD)](https://feature-sliced.design/) architecture patterns in JavaScript and TypeScript projects.
 
@@ -12,7 +12,7 @@ ESLint plugin for enforcing [Feature-Sliced Design (FSD)](https://feature-sliced
 ## Installation
 
 ```bash
-npm install --save-dev eslint-plugin-fsd-pattern
+npm install --save-dev @taylous/eslint-plugin-fsd-pattern
 ```
 
 ## Usage
@@ -22,7 +22,7 @@ npm install --save-dev eslint-plugin-fsd-pattern
 Add to your `eslint.config.js`:
 
 ```javascript
-import fsdPattern from 'eslint-plugin-fsd-pattern';
+import fsdPattern from '@taylous/eslint-plugin-fsd-pattern';
 
 export default [
   {
@@ -39,7 +39,7 @@ export default [
 Or use the recommended configuration:
 
 ```javascript
-import fsdPattern from 'eslint-plugin-fsd-pattern';
+import fsdPattern from '@taylous/eslint-plugin-fsd-pattern';
 
 export default [
   fsdPattern.configs.recommended,
@@ -53,9 +53,9 @@ Add to your `.eslintrc.js` or `.eslintrc.json`:
 **JavaScript (.eslintrc.js):**
 ```javascript
 module.exports = {
-  plugins: ['fsd-pattern'],
+  plugins: ['@taylous/fsd-pattern'],
   rules: {
-    'fsd-pattern/layer-imports': 'error',
+    '@taylous/fsd-pattern/layer-imports': 'error',
   },
 };
 ```
@@ -63,9 +63,9 @@ module.exports = {
 **JSON (.eslintrc.json):**
 ```json
 {
-  "plugins": ["fsd-pattern"],
+  "plugins": ["@taylous/fsd-pattern"],
   "rules": {
-    "fsd-pattern/layer-imports": "error"
+    "@taylous/fsd-pattern/layer-imports": "error"
   }
 }
 ```
@@ -73,9 +73,9 @@ module.exports = {
 **With options:**
 ```javascript
 module.exports = {
-  plugins: ['fsd-pattern'],
+  plugins: ['@taylous/fsd-pattern'],
   rules: {
-    'fsd-pattern/layer-imports': ['error', {
+    '@taylous/fsd-pattern/layer-imports': ['error', {
       usePlural: false,  // Use singular layer names
     }],
   },
